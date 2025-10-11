@@ -1,0 +1,13 @@
+def calculate_delivery_fee():
+        # Get user input
+        distance = float(input("Enter distance in kilometers: "))
+        rate = float(input("\nEnter rate per kilometer (₱): "))
+
+        # Calculate fee
+        fee = distance * rate
+
+        # Display total fee
+        print(f"\nTotal Delivery Fee: ", fee)
+
+# Call the function
+calculate_delivery_fee()
