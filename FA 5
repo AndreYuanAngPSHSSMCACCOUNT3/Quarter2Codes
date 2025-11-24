@@ -1,0 +1,64 @@
+# ----------------------------------------------------------------------
+# Travel Itinerary Updater Program
+# Goal: Practice updating elements in a list (array) using indices.
+# ----------------------------------------------------------------------
+
+# 1. Initialize the list of 5 travel destinations.
+# In Python, lists are used as dynamic arrays. Indices start at 0.
+travel_destinations = [
+    "London, UK",          # Index 0 (1st destination)
+    "Paris, France",       # Index 1 (2nd destination)
+    "Rome, Italy",         # Index 2 (3rd destination)
+    "Tokyo, Japan",        # Index 3 (4th destination)
+    "New York, USA"        # Index 4 (5th destination)
+]
+
+print("--- Initial Travel Itinerary ---")
+# Display the initial list with their destination number (index + 1)
+for i, destination in enumerate(travel_destinations):
+    print(f"Destination {i + 1} (Index {i}): {destination}")
+
+print("-" * 35)
+print("The user wants to update the 2nd (Index 1) and 5th (Index 4) destinations.")
+
+# --- Update Process ---
+
+# 2. Update the Second Destination (Index 1)
+print("\n[Step 1: Updating the 2nd Destination]")
+# Get new value from the user
+new_destination_2 = input(
+    f"Enter the new destination for the 2nd spot (currently '{travel_destinations[1]}'): "
+)
+
+# Update the element at the specified index
+# The second destination is at index 1
+travel_destinations[1] = new_destination_2
+
+print(f"\nSUCCESS: Destination 2 has been updated to '{travel_destinations[1]}'.")
+print("-" * 35)
+
+
+# 3. Update the Fifth Destination (Index 4)
+print("\n[Step 2: Updating the 5th Destination]")
+# Get new value from the user
+new_destination_5 = input(
+    f"Enter the new destination for the 5th spot (currently '{travel_destinations[4]}'): "
+)
+
+# Update the element at the specified index
+# The fifth destination is at index 4
+travel_destinations[4] = new_destination_5
+
+print(f"\nSUCCESS: Destination 5 has been updated to '{travel_destinations[4]}'.")
+print("-" * 35)
+
+
+# 4. Display the Final Updated List
+print("\n--- Final Updated Travel Itinerary ---")
+for i, destination in enumerate(travel_destinations):
+    # Highlight the updated items for clarity
+    status = "(UPDATED)" if i == 1 or i == 4 else ""
+    print(f"Destination {i + 1} (Index {i}): {destination} {status}")
+
+print("\nProgram finished. The itinerary has been successfully modified.")
+# ----------------------------------------------------------------------
